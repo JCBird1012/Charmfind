@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-	<link rel="stylesheet" type="text/css" href="animate.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title> RPI - Lucky Charms Locator</title>
-	<link rel="shortcut icon" href="rainbow.ico">
+	<link rel="shortcut icon" href="img/rainbow.ico">
 
 	<style>
 	body {
-		background-image: url("downtown.jpg");
+		background-image: url("img/downtown.jpg");
 		background-size: cover;
 		filter: brightness(50%);
 	}
@@ -19,7 +19,7 @@
 		color: #c0392b;
 		font-size: 50px;
 		font-family: 'Open Sans', sans-serif;
-		text-shadow: 2px 2px #000000;
+		text-shadow: 1px 1px #000000;
 	}
 
 	#smallheader { 
@@ -29,7 +29,7 @@
 		color: #96281B;
 		font-size: 25px;
 		font-family: 'Open Sans', sans-serif;
-		text-shadow: 2px 2px #000000;
+		text-shadow: 1px 1px #000000;
 	}
 
 	#dininghall {
@@ -42,9 +42,15 @@
 	{
 		color: #27ae60;
 		font-size: 20px;
-		margin-bottom: 70px;
 		font-family: 'Open Sans', sans-serif;
 	}
+
+	.greencheck
+	{
+    	max-width: 2.5%;
+    	height: auto;
+    	margin-bottom: 70px;
+	}	
 
 	</style>
 </head>
@@ -56,7 +62,11 @@
 
 		<center>
 			<div id = "dininghall">Blitman Commons</div>
-			<center><div id = "available">Available</div></center>
+			<center><div id = "available">
+			Available
+			<div id = "greencheck"><center><img class = "greencheck" src = "img/greencheck.png"></center></div>
+
+			</div></center>
 			<div id = "dininghall">Burdett Avenue Residence Hall</div>
 			<center><div id = "dininghall">Commons</div>
 			<div id = "dininghall">Sage</div>
