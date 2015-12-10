@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title> RPI - Lucky Charms Locator</title>
@@ -18,7 +19,7 @@
 		padding: 0;
 		color: #c0392b;
 		font-size: 50px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		text-shadow: 1px 1px #000000;
 	}
 
@@ -28,21 +29,21 @@
 		margin-bottom: 45px;
 		color: #96281B;
 		font-size: 25px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		text-shadow: 1px 1px #000000;
 	}
 
 	#dininghall {
 		color: #FFFFFF;
 		font-size: 25px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	#available
 	{
 		color: #27ae60;
 		font-size: 20px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	.greencheck
@@ -52,25 +53,50 @@
     	margin-bottom: 70px;
 	}	
 
+	footer
+	{
+		color: #FFFFFF;
+		font-family: 'Montserrat', sans-serif;
+		position:relative;
+		bottom:-250px;		
+		text-align:center;
+		width:100%;
+	}
+
 	</style>
 </head>
 
 <body>
-	<div class ="animated fadeInUp">
-		<center><div id = "header">Rensselaer Polytechnic Institute</div> </center>
-		<center><div id = "smallheader">Lucky Charms Locator</div></center>
+	<div class ="animated fadeIn">
+		<center>
+			<div id = "header">Rensselaer Polytechnic Institute</div> 
+		</center>
+		<center>
+			<div id = "smallheader">Lucky Charms Locator</div>
+		</center>
 
 		<center>
-			<div id = "dininghall">Blitman Commons</div>
-			<center><div id = "available">
+		<div id = "dininghall">Blitman Commons</div>
+			<center>
+			<div id = "available">
 			Available
-			<div id = "greencheck"><center><img class = "greencheck" src = "img/greencheck.png"></center></div>
+			<div id = "greencheck">
+			<center>
+			<img class = "greencheck" src = "img/greencheck.png">
+			</center>
+		</div>
 
-			</div></center>
+			</div>
+			</center>
 			<div id = "dininghall">Burdett Avenue Residence Hall</div>
-			<center><div id = "dininghall">Commons</div>
+			<center>
+			<div id = "dininghall">Commons</div>
 			<div id = "dininghall">Sage</div>
 		</center>
+
+	<footer>
+		<p>Made with <span style="color:#e74c3c;">&hearts;</span> by Jonathan Caicedo</p>
+	</footer>
 
 
 </body>
