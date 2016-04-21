@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body {
+		height: 100%;
+		background-image: url("../img/downtown.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		filter: brightness(50%);
+	}
+
+	#header{ 
+		margin: 0;
+		padding: 0;
+		color: #c0392b;
+		font-size: 50px;
+		font-family: 'Montserrat', sans-serif;
+		text-shadow: 1px 1px #000000;
+	}
+
+	#description { 
+		margin: 0;
+		padding: 0;
+		margin-bottom: 45px;
+		color: #96281B;
+		font-size: 15px;
+		font-family: 'Montserrat', sans-serif;
+		text-shadow: 1px 1px #000000;
+	}
+
+	#dininghall {
+		color: #FFFFFF;
+		font-size: 25px;
+		font-family: 'Montserrat', sans-serif;
+		width: auto;
+	}
+
+	#available
+	{
+		color: #27ae60;
+		font-size: 20px;
+		font-family: 'Montserrat', sans-serif;
+		display: inline-block
+	}
+
+	.greencheck
+	{
+    	max-width: 2.5%;
+    	height: auto;
+    	clear: right;
+    	display: inline-block;
+	}
+
+	ul
+	{
+    	list-style: none;
+	}
+
+	li
+	{
+		padding-bottom: 1%;
+	}
+
+	footer
+	{
+		color: #FFFFFF;
+		font-family: 'Montserrat', sans-serif;
+		position:relative;
+		bottom:-250px;		
+		text-align:center;
+		width:100%;
+	}

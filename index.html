@@ -4,95 +4,56 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title> RPI - Lucky Charms Locator</title>
+	<title>Charmfind</title>
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" href="img/rainbow.ico">
-
-	<style>
-	body {
-		background-image: url("img/downtown.jpg");
-		background-size: cover;
-		filter: brightness(50%);
-	}
-
-	#header{ 
-		margin: 0;
-		padding: 0;
-		color: #c0392b;
-		font-size: 50px;
-		font-family: 'Montserrat', sans-serif;
-		text-shadow: 1px 1px #000000;
-	}
-
-	#smallheader { 
-		margin: 0;
-		padding: 0;
-		margin-bottom: 45px;
-		color: #96281B;
-		font-size: 25px;
-		font-family: 'Montserrat', sans-serif;
-		text-shadow: 1px 1px #000000;
-	}
-
-	#dininghall {
-		color: #FFFFFF;
-		font-size: 25px;
-		font-family: 'Montserrat', sans-serif;
-	}
-
-	#available
-	{
-		color: #27ae60;
-		font-size: 20px;
-		font-family: 'Montserrat', sans-serif;
-	}
-
-	.greencheck
-	{
-    	max-width: 2.5%;
-    	height: auto;
-    	margin-bottom: 70px;
-	}	
-
-	footer
-	{
-		color: #FFFFFF;
-		font-family: 'Montserrat', sans-serif;
-		position:relative;
-		bottom:-250px;		
-		text-align:center;
-		width:100%;
-	}
-
-	</style>
 </head>
 
 <body>
-	<div class ="animated fadeIn">
+	<div class ="animated fadeInUp">
 		<center>
-			<div id = "header">Rensselaer Polytechnic Institute</div> 
+			<div id = "header">Charmfind</div> 
 		</center>
 		<center>
-			<div id = "smallheader">Lucky Charms Locator</div>
+			<div id = "description">A tool that helps you find RPI dining halls that have Lucky Charms.</div>
 		</center>
+    
+    <center>
+        <ul>
+        	<li>
+        		<div id = "dininghall">Blitman Commons</div>
+					<div id = "available">	
+						Available
+						<img class = "greencheck" src = "img/greencheck.png">
+					</div>			
+			</li>
 
-		<center>
-		<div id = "dininghall">Blitman Commons</div>
-			<center>
-			<div id = "available">
-			Available
-			<div id = "greencheck">
-			<center>
-			<img class = "greencheck" src = "img/greencheck.png">
-			</center>
-		</div>
+            <li>
+            	<div id = "dininghall">Burdett Avenue Residence Hall</div>
+            		<div id = "available">	
+						Available
+						<img class = "greencheck" src = "img/greencheck.png">
+					</div>		
+            </li>
 
-			</div>
-			</center>
-			<div id = "dininghall">Burdett Avenue Residence Hall</div>
-			<center>
-			<div id = "dininghall">Commons</div>
-			<div id = "dininghall">Sage</div>
-		</center>
+            <li>
+            	<div id = "dininghall">Commons</div>
+            		<div id = "available">	
+						Available
+						<img class = "greencheck" src = "img/greencheck.png">
+					</div>	
+            </li>
+
+            <li>
+	            <div id = "dininghall">Sage Commons</div>
+	            	<div id = "available">	
+						Available
+						<img class = "greencheck" src = "img/greencheck.png">
+					</div>	
+            </li>
+        </ul>
+  	</center>
+		
 
 	<footer>
 		<p>Made with <span style="color:#e74c3c;">&hearts;</span> by Jonathan Caicedo</p>
