@@ -7,53 +7,41 @@
 	<title>Charmfind</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" href="img/rainbow.ico">
+	<script src="js/jquery-1.12.3.min.js"></script>
 </head>
 
 <body>
 	<div class ="animated fadeInUp">
 		<center>
 			<div id = "header">Charmfind</div> 
-		</center>
-		<center>
 			<div id = "description">A tool that helps you find RPI dining halls that have Lucky Charms.</div>
 		</center>
-    
-    <center>
-        <ul>
-        	<li>
-        		<div id = "dininghall">Blitman Commons</div>
-					<div id = "available">	
-						Available
-						<img class = "greencheck" src = "img/greencheck.png">
-					</div>			
+	    
+	    <ul class = "dininghalls">
+	    	<li>
+	    		<div id = "Blitman" class = "dininghall">Blitman Commons</div>
+								
 			</li>
 
-            <li>
-            	<div id = "dininghall">Burdett Avenue Residence Hall</div>
-            		<div id = "available">	
-						Available
-						<img class = "greencheck" src = "img/greencheck.png">
-					</div>		
-            </li>
+	        <li>
+	        	<div id = "BARH" class = "dininghall">Burdett Avenue Residence Hall</div>
+	        			
+	        </li>
 
-            <li>
-            	<div id = "dininghall">Commons</div>
-            		<div id = "available">	
-						Available
-						<img class = "greencheck" src = "img/greencheck.png">
-					</div>	
-            </li>
+	        <li>
+	        	<div id = "Commons" class = "dininghall">Commons</div>
+	        		
+	        </li>
 
-            <li>
-	            <div id = "dininghall">Sage Commons</div>
-	            	<div id = "available">	
-						Available
-						<img class = "greencheck" src = "img/greencheck.png">
-					</div>	
-            </li>
-        </ul>
-  	</center>
+	        <li>
+	            <div id = "Sage" class = "dininghall">Sage Commons</div>
+	            	
+	        </li>
+	    </ul>
+	    
+	</div>
 		
+	<script src="js/main.js"></script>
 
 	<footer>
 		<p>Made with <span style="color:#e74c3c;">&hearts;</span> by Jonathan Caicedo</p>
