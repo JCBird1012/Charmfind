@@ -1,8 +1,5 @@
-var available = "<div class = \"available\">	Available <img class = \"greencheck\" src = \"img/greencheck.png\"> </div>";
-var unavailable = "<div class = \"unavailable\">	Unavailable <img class = \"redx\" src = \"img/redx.png\"> </div>";
 var connectionError = "<div class = \"unavailable\">Connection Error</div>"
 initalize();
-
 
 function initalize()
 {
@@ -24,26 +21,23 @@ function initalize()
 
 function evalulate(data)
 {
-	if (data != null)
+	var available, unavailable;
+
+	for (var i = 0; i <= 3; ++i)
 	{
+		//TODO - Remove these from the loop... Have to figure out the best way to do that.
+		available = "<div class = \"available\">Available <img class = \"greencheck\" src = \"img/greencheck.png\"> </div> <div class = \"updated\">Last updated: " + data.results[i].last_updated + "</div>" + "<div class = \"timestamp\">Available since: " + data.results[i].availability + "</div>";
+		unavailable = "<div class = \"unavailable\">Unavailable <img class = \"redx\" src = \"img/redx.png\"> </div> <div class = \"updated\">Last updated: " + data.results[i].last_updated + "</div>" + "<div class = \"timestamp\">Unvailable since: " + data.results[i].availability + "</div>";
 
-		switch (data.id)
+		if (data.results[i].available == true)
 		{
-			case 0: 
-				if (data.available == true)
-				{
-					$(Blitman).append(available + "<div class = \"updated\">Last updated: " + data.last_updated + "</div>" + "<div class = \"timestamp\">Available since: " + data.availability + "</div>");	
-				}
+			console.log(data.results[i].dining_hall);
+			$("#" + data.results[i].dining_hall).append(available);
+		}
 
-				else if (data.available == false)
-				{
-					$(Blitman).append(unavailable + "<div class = \"updated\">Last updated: " + data.last_updated + "</div>" + "<div class = \"timestamp\">Unavailable since: " + data.availability + "</div>");	
-				}
-			break;
-
-			default:
-			break;
-			
+		else
+		{
+			$("#" + data.results[i].dining_hall).append(unavailable);
 		}
 	}
 
