@@ -19,15 +19,15 @@
 			"dining_hall": "Commons",
 			"id": 2,
 			"available": true,
-			"last_updated": "Thu, 21 Apr 2016 22:46:13",
-			"availability": "Thu, 21 Apr 2016 22:46:13"
+			"last_updated": "Thu, 22 Apr 2016 22:46:13",
+			"availability": "Thu, 22 Apr 2016 22:46:13"
 		},
 		{
 			"dining_hall": "Sage",
 			"id": 3,
 			"available": true,
-			"last_updated": "Thu, 21 Apr 2016 22:46:13",
-			"availability": "Thu, 21 Apr 2016 22:46:13"
+			"last_updated": "Thu, 22 Apr 2016 22:46:13",
+			"availability": "Thu, 22 Apr 2016 22:46:13"
 		}
 	]
 }

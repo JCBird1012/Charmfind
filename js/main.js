@@ -5,7 +5,7 @@ function initalize()
 {
 	var data = null;
 
-	$.getJSON("http://localhost:8080/data.json", function(data)
+	$.getJSON("data.json", function(data)
 	{
 
     	data = $.parseJSON(JSON.stringify(data));
@@ -31,7 +31,6 @@ function evalulate(data)
 
 		if (data.results[i].available == true)
 		{
-			console.log(data.results[i].dining_hall);
 			$("#" + data.results[i].dining_hall).append(available);
 		}
 
