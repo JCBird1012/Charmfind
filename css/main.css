@@ -80,7 +80,6 @@ body {
 	{
 		font-size: 10px;
 		color:#FFFFFF;
-		padding-bottom: 15px;
 	}
 
 	ul
@@ -90,7 +89,6 @@ body {
 
 	li
 	{
-		width:100%;
 		padding-bottom: 1%;
 	}
 
@@ -105,4 +103,21 @@ body {
 		width: 100%;
 		padding: 1.5em 0 0 0;
 		text-align: center;
+	}
+
+	button {
+		font-family: 'Montserrat', sans-serif;
+		display: inline-block;
+		height: 2.0em;
+		line-height: 2.0em;
+		padding: 0 0.5em;
+		padding-bottom: 15px;
+		background-color: transparent;
+		border-radius: 2px;
+		border: solid 1px #c8cccf;
+		color: #FFFFFF !important;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
 	}
