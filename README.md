@@ -19,4 +19,4 @@ Updates to availability information is made by making POST requests to ```/data/
 There are two parameters to set, an id, and an available flag (a boolean).
 The id flag (starting at 0) is simply the dining halls in alphabetical order.
 
-There is also the ability to grab information on specific dining halls, this can be done by making GET requests to ```/data/info``` using the same id as you would when updating information. The entire dataset can be grabbed by not specifying an id.
+There is also the ability to grab information on specific dining halls, this can be done by making GET requests to ```/data/info``` using the same id as you would when updating information. The entire dataset can be grabbed by **not** specifying an id.
