@@ -15,7 +15,8 @@ Or if you're lazy, just run this...
       npm install express moment easyjson body-parser
       
 ### API (if you want to call it that?)
-Updates to availability information is made by making POST requests to ```/data/<first word of dining hall here>```.
-The only parameter sent is the actual availability (a boolean value). Time and date information is updated server-side.
+Updates to availability information is made by making POST requests to ```/data/update```.
+There are two parameters to set, an id, and an available flag (a boolean).
+The id flag (starting at 0) is simply the dining halls in alphabetical order.
 
-Eventually, I'll add routers for grabbing individual dining hall information, but for now, the entire JSON can be easily grabbed.
+There is also the ability to grab information on specific dining halls, this can be done by making GET requests to ```/data/info``` using the same id as you would when updating information. The entire dataset can be grabbed by not specifying an id.
