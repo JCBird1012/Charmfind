@@ -1,33 +1,32 @@
 {
-	"results":
-	[
-		{
-			"dining_hall": "Blitman_Commons",
-			"id": 0,
-			"available": false,
-			"last_updated": "Thu, 21 Apr 2016 22:46:13",
-			"availability": "Thu, 21 Apr 2016 22:46:13"
-		},
-		{
-			"dining_hall": "Burdett_Avenue_Residence_Hall",
-			"id": 1,
-			"available": true,
-			"last_updated": "Thu, 22 Apr 2016 22:46:13",
-			"availability": "Thu, 22 Apr 2016 22:46:13"
-		},
-		{
-			"dining_hall": "Commons",
-			"id": 2,
-			"available": true,
-			"last_updated": "Thu, 22 Apr 2016 22:46:13",
-			"availability": "Thu, 22 Apr 2016 22:46:13"
-		},
-		{
-			"dining_hall": "Sage",
-			"id": 3,
-			"available": true,
-			"last_updated": "Thu, 22 Apr 2016 22:46:13",
-			"availability": "Thu, 22 Apr 2016 22:46:13"
-		}
-	]
+    "results": [
+        {
+            "dining_hall": "Blitman_Commons",
+            "id": 0,
+            "available": false,
+            "last_updated": "Sunday, May 22nd 2016, 12:32:55 am",
+            "availability": "Sunday, May 22nd 2016, 12:32:55 am"
+        },
+        {
+            "dining_hall": "Burdett_Avenue_Residence_Hall",
+            "id": 1,
+            "available": false,
+            "last_updated": "Sunday, May 22nd 2016, 3:41:40 pm",
+            "availability": "Sunday, May 22nd 2016, 3:41:40 pm"
+        },
+        {
+            "dining_hall": "Commons",
+            "id": 2,
+            "available": false,
+            "last_updated": "Sunday, May 22nd 2016, 3:41:54 pm",
+            "availability": "Sunday, May 22nd 2016, 3:41:54 pm"
+        },
+        {
+            "dining_hall": "Sage",
+            "id": 3,
+            "available": true,
+            "last_updated": "Sunday, May 22nd 2016, 3:42:00 pm",
+            "availability": "Sunday, May 22nd 2016, 3:42:00 pm"
+        }
+    ]
 }
