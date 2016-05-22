@@ -8,10 +8,11 @@ We're also going to need some install some Node modules, so fire up npm and inst
 * express
 * moment
 * easyjson
+* body-parser
 
 Or if you're lazy, just run this...
 
-      npm install express moment easyjson
+      npm install express moment easyjson body-parser
       
 ### API (if you want to call it that?)
 Updates to availability information is made by making POST requests to ```/data/<first word of dining hall here>```.
