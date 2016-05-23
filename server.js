@@ -21,15 +21,27 @@ app.post('/data/update', function(req, res) {
 app.get('/data/info', function(req, res) {
    var id = req.query.id;
    
-   if (id === undefined)
+    if (id === undefined)
       {
          res.send(json.path('data/data.json').get('results'));
       }
-   else
+   
+   else 
+   {
+      id = parseInt(id);
+      
+      if (isNaN(id) || !(id >= 0 && id <= 3))
+      {
+         res.status(400);
+         res.send("ID isn't an acceptable dining hall ID.");
+      }
+      
+      else
       {
          res.send(json.path('data/data.json').get('results[' + id + ']'));
       }
     
+   }
 });
 
 function process(id, update, res)
