@@ -65,23 +65,25 @@ function process(id, update, res)
    
    else
       {
-         if (value == update)
+         if (value === update)
             {
                   json.path('data/data.json').modify('results[' + id + '][last_updated]', moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
                res.send("Last updated renewed.");
             }
          
          //You'll get a deprecation warning from moment here... That's fine (it doesn't break anything, yet...)
-         else if (moment().diff(moment(availability), 'hours') >= 6)
+         else if (moment().diff(moment(last_updated, ["dddd, MMMM Do YYYY, h:mm:ss a"]), 'hours') >= 6)
             {
+               //Update the availbility data... Since update is treated as a string, and we want it as a boolean, we check to ensure it equals true (which is a quick and easy way to achieve that).
+               json.path('data/data.json').modify('results[' + id + '][available]', (update === 'true'));
                json.path('data/data.json').modify('results[' + id + '][last_updated]', moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
                  json.path('data/data.json').modify('results[' + id + '][availability]', moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
                res.send("Updated.");
             }
-         
+        
          else
             {
-                res.send("At least six hours from latest availability update before status can be changed.");
+                res.send("At least six hours must elapse from latest availability update before status can be changed.");
             }
       }
 }
