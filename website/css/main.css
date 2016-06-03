@@ -80,7 +80,7 @@ body {
 	{
 		font-size: 10px;
 		color:#FFFFFF;
-	}
+	} 
 
 	ul
 	{
@@ -115,9 +115,30 @@ body {
 		background-color: transparent;
 		border-radius: 2px;
 		border: solid 1px #c8cccf;
-		color: #FFFFFF !important;
+		color: #FFFFFF;
 		cursor: pointer;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
 	}
+
+   button.available {
+      font-size: initial;
+      border: solid 1px #27ae60;
+   }
+   
+   button.available:hover {
+      background-color: #8ae5b0;
+      transition: background-color 0.25s;
+   }
+
+   button.unavailable {
+      border: solid 1px #e74c3c;
+      font-size: initial;
+      margin-left: 1em;
+   }
+   
+   button.unavailable:hover {
+      background-color: #f8c9c4;
+        transition: background-color 0.25s;
+   }

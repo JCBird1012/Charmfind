@@ -24,9 +24,9 @@
         {
             "dining_hall": "Sage",
             "id": 3,
-            "available": false,
-            "last_updated": "Wednesday, June 1st 2016, 3:30:20 pm",
-            "availability": "Wednesday, June 1st 2016, 3:30:20 pm"
+            "available": true,
+            "last_updated": "Friday, June 3rd 2016, 12:33:09 am",
+            "availability": "Friday, June 3rd 2016, 12:33:09 am"
         }
     ]
 }
