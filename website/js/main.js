@@ -2,9 +2,28 @@ var connectionError = "<div class = \"unavailable\">Connection Error</div>"
 initalize();
 $(".dininghalls").on('click', 'button.update', function () {
   $(this).fadeOut(500);
-  var id = $(this).closest("div").attr("id")
-  var test = $("<button class = 'available'>Available</button><button class = 'unavailable'>Unavailable</button>").hide().fadeIn(500);
-  $(this).replaceWith(test);
+  var buttons = $("<button class = 'available'>Available</button><button class = 'unavailable'>Unavailable</button>").hide().fadeIn(500);
+  $(this).replaceWith(buttons);
+});
+
+$(".dininghalls").on('click', 'button.available', function () {
+   var target = $(event.target).parent().parent(),
+      index = $(target).index();
+   var res;
+   $.post( "/data/update", { id: index, available: true } ).done(function (data) {
+      console.log(data);
+   });    
+   //$(this).parent().find("button").fadeOut(500);
+});
+
+$(".dininghalls").on('click', 'button.unavailable', function () {
+   var target = $(event.target).parent().parent(),
+      index = $(target).index();
+   $.post( "/data/update", { id: index, available: false } ).done(function (data) {
+      console.log(data);
+   });
+   
+   $(this).fadeOut(500);
 });
 
 function initalize()
