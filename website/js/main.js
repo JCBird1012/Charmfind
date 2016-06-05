@@ -9,28 +9,13 @@ $(".dininghalls").on('click', 'button.update', function () {
 $(".dininghalls").on('click', 'button.available', function () {
    var target = $(event.target).parent().parent(), index = $(target).index();
    var button = $(this);
-   $.post( "/data/update", { id: index, available: true } ).done(function (data) {
-        respond(data);
-   }); 
-   
-   function respond(res)
-   {
-      var response = $("<p style = 'font-size:10pt; display: inline-block;'>" + res + "</p>").fadeIn(500);
-      button.parent().find("button").hide();
-      button.replaceWith(response);
-      
-      if (res === "Updated.")
-         {
-            location.reload();
-         }
-   }
+   update(button, index, true);
 });
 
 $(".dininghalls").on('click', 'button.unavailable', function () {
    var target = $(event.target).parent().parent(), index = $(target).index();
-   $.post( "/data/update", { id: index, available: false } ).done(function (data) {
-      console.log(data);
-   });
+   var button = $(this);
+   update(button, index, false)
 });
 
 function initalize()
@@ -72,5 +57,23 @@ function evalulate(data)
 			$("#" + data.results[i].dining_hall).append(unavailable + updateButton);
 		}
 	}
+}
 
+function update(button, index, available)
+{
+   $.post( "/data/update", { id: index, available: available } ).done(function (data) {
+        respond(data);
+   }); 
+   
+   function respond(res)
+   {
+      var response = $("<p style = 'font-size:10pt; display: inline-block;'>" + res + "</p>").fadeIn(500);
+      button.parent().find("button").hide();
+      button.replaceWith(response);
+      
+      if (res === "Updated." || res === "Last updated renewed.")
+         {
+             setTimeout("location.reload(true);", 500);
+         }
+   }
 }

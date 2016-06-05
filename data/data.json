@@ -4,27 +4,27 @@
             "dining_hall": "Blitman_Commons",
             "id": 0,
             "available": true,
-            "last_updated": "Sunday, June 5th 2016, 7:22:03 pm",
+            "last_updated": "Sunday, June 5th 2016, 8:01:08 pm",
             "availability": "Sunday, June 5th 2016, 7:22:03 pm"
         },
         {
             "dining_hall": "Burdett_Avenue_Residence_Hall",
             "id": 1,
-            "available": true,
-            "last_updated": "Sunday, June 5th 2016, 5:07:14 pm",
+            "available": false,
+            "last_updated": "Sunday, June 5th 2016, 8:02:31 pm",
             "availability": "Sunday, June 5th 2016, 5:07:14 pm"
         },
         {
             "dining_hall": "Commons",
             "id": 2,
-            "available": true,
-            "last_updated": "Sunday, June 5th 2016, 5:07:17 pm",
+            "available": false,
+            "last_updated": "Sunday, June 5th 2016, 8:01:47 pm",
             "availability": "Sunday, June 5th 2016, 5:07:17 pm"
         },
         {
             "dining_hall": "Sage",
             "id": 3,
-            "available": true,
+            "available": false,
             "last_updated": "Sunday, June 5th 2016, 5:07:15 pm",
             "availability": "Sunday, June 5th 2016, 5:07:15 pm"
         }

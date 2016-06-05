@@ -65,7 +65,7 @@ function process(id, update, res)
    
    else
       {
-         if (value === update)
+         if (value.toString() === update)
             {
                   json.path('data/data.json').modify('results[' + id + '][last_updated]', moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
                res.send("Last updated renewed.");
