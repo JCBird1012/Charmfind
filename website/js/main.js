@@ -7,23 +7,30 @@ $(".dininghalls").on('click', 'button.update', function () {
 });
 
 $(".dininghalls").on('click', 'button.available', function () {
-   var target = $(event.target).parent().parent(),
-      index = $(target).index();
-   var res;
+   var target = $(event.target).parent().parent(), index = $(target).index();
+   var button = $(this);
    $.post( "/data/update", { id: index, available: true } ).done(function (data) {
-      console.log(data);
-   });    
-   //$(this).parent().find("button").fadeOut(500);
+        respond(data);
+   }); 
+   
+   function respond(res)
+   {
+      var response = $("<p style = 'font-size:10pt; display: inline-block;'>" + res + "</p>").fadeIn(500);
+      button.parent().find("button").hide();
+      button.replaceWith(response);
+      
+      if (res === "Updated.")
+         {
+            location.reload();
+         }
+   }
 });
 
 $(".dininghalls").on('click', 'button.unavailable', function () {
-   var target = $(event.target).parent().parent(),
-      index = $(target).index();
+   var target = $(event.target).parent().parent(), index = $(target).index();
    $.post( "/data/update", { id: index, available: false } ).done(function (data) {
       console.log(data);
    });
-   
-   $(this).fadeOut(500);
 });
 
 function initalize()

@@ -1,12 +1,16 @@
 @charset "UTF-8";
 
-body {
-		height: 100%;
-		background-image: url("../img/downtown.jpg");
-		background-size: cover;
-		background-attachment: fixed;
-		filter: brightness(50%);
-	}
+   body {
+         height: 100%;
+         background-image: url("../img/downtown.jpg");
+         background-size: cover;
+         background-attachment: fixed;
+         filter: brightness(50%);
+	   }
+
+   p {
+      font-size:1em;
+   }
 
    #header { 
 		margin: 0;
@@ -135,5 +139,5 @@ body {
    
    button.unavailable:hover {
       background-color: #e74c3c;
-        transition: background-color 0.25s;
+      transition: background-color 0.25s;
    }
