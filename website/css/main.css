@@ -5,7 +5,7 @@
          background-image: url("../img/downtown.jpg");
          background-size: cover;
          background-attachment: fixed;
-         filter: brightness(50%);
+         filter: brightness(100%);
 	   }
    
    img {
@@ -115,6 +115,7 @@
 		height: 2.0em;
 		line-height: 2.0em;
 		padding: 0 0.5em;
+      margin-top: 15px;
 		padding-bottom: 15px;
 		background-color: transparent;
 		border-radius: 2px;
@@ -128,6 +129,7 @@
 
    button.available {
       font-size: initial;
+      margin-top: 15px;
       color: #FFFFFF;
       border: solid 1px #c8cccf;
    }
@@ -139,6 +141,7 @@
 
    button.unavailable {
       border: solid 1px #c8cccf;
+      margin-top: 15px;
       font-size: initial;
       color: #FFFFFF;
       margin-left: 1em;

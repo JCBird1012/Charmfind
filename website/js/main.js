@@ -7,13 +7,13 @@ $(".dininghalls").on('click', 'button.update', function () {
 });
 
 $(".dininghalls").on('click', 'button.available', function () {
-   var target = $(event.target).parent().parent(), index = $(target).index();
+   var target = $(event.target).parent().parent().parent(), index = $(target).index();
    var button = $(this);
    update(button, index, true);
 });
 
 $(".dininghalls").on('click', 'button.unavailable', function () {
-   var target = $(event.target).parent().parent(), index = $(target).index();
+   var target = $(event.target).parent().parent().parent(), index = $(target).index();
    var button = $(this);
    update(button, index, false)
 });
@@ -43,18 +43,17 @@ function evalulate(data)
 	for (var i = 0; i <= 3; ++i)
 	{
 		//TODO - Remove these from the loop... Have to figure out the best way to do that.
-		available = "<div class = \"available\">Available <img class = \"greencheck\" src = \"img/greencheck.png\"> </div> <div class = \"updated\">Last updated: " + data.results[i].last_updated + "</div>" + "<div class = \"timestamp\">Available since: " + data.results[i].availability + "</div>";
-		unavailable = "<div class = \"unavailable\">Unavailable <img class = \"redx\" src = \"img/redx.png\"> </div> <div class = \"updated\">Last updated: " + data.results[i].last_updated + "</div>" + "<div class = \"timestamp\">Unvailable since: " + data.results[i].availability + "</div>";
-		updateButton = "<button class = 'update'>Update</button>";
+		available = "<div class = \"available\">Available <img class = \"greencheck\" src = \"img/greencheck.png\"> <div class = \"updated\">Last updated: " + data.results[i].last_updated + "</div>" + "<div class = \"timestamp\">Available since: " + data.results[i].availability + "</div> <button class = 'update'>Update</button> </div>";
+		unavailable = "<div class = \"unavailable\">Unavailable <img class = \"redx\" src = \"img/redx.png\"> <div class = \"updated\">Last updated: " + data.results[i].last_updated + "</div>" + "<div class = \"timestamp\">Unvailable since: " + data.results[i].availability + "</div> <button class = 'update'>Update</button> </div>";
 
 		if (data.results[i].available == true)
 		{
-			$("#" + data.results[i].dining_hall).append(available + updateButton);
+			$("#" + data.results[i].dining_hall).append(available);
 		}
 
 		else
 		{
-			$("#" + data.results[i].dining_hall).append(unavailable + updateButton);
+			$("#" + data.results[i].dining_hall).append(unavailable);
 		}
 	}
 }
@@ -68,12 +67,20 @@ function update(button, index, available)
    function respond(res)
    {
       var response = $("<p style = 'font-size:10pt; display: inline-block;'>" + res + "</p>").fadeIn(500);
+      //We want to hide both buttons, not just the button clicked.
       button.parent().find("button").hide();
       button.replaceWith(response);
       
-      if (res === "Updated." || res === "Last updated renewed.")
+      if (
+         res === "Updated." || res === "Last updated renewed.")
          {
+             response.css('color', '#27ae60');
              setTimeout("location.reload(true);", 500);
+         }
+      
+      else
+         {
+            response.css('color', '#e74c3c');
          }
    }
 }

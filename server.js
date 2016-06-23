@@ -74,7 +74,7 @@ function process(id, update, res)
          //You'll get a deprecation warning from moment here... That's fine (it doesn't break anything, yet...)
          else if (moment().diff(moment(last_updated, ["dddd, MMMM Do YYYY, h:mm:ss a"]), 'hours') >= 6)
             {
-               //Update the availbility data... Since update is treated as a string, and we want it as a boolean, we check to ensure it equals true (which is a quick and easy way to achieve that).
+               //Update the availbility data... Since update is treated as a string, and we want it as a boolean, we check to ensure it equals true.
                json.path('data/data.json').modify('results[' + id + '][available]', (update === 'true'));
                json.path('data/data.json').modify('results[' + id + '][last_updated]', moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
                  json.path('data/data.json').modify('results[' + id + '][availability]', moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
