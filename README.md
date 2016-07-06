@@ -24,6 +24,7 @@ There is also the ability to grab information on specific dining halls, this can
 ###License
 This software is licensed under the BSD 2-clause license.
 
+```
 Copyright (c) 2016, Jonathan Caicedo
 All rights reserved.
 
@@ -47,3 +48,4 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
